@@ -1,9 +1,10 @@
 package com.example.projetmobile;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
     private int id;
     private String email;
     private String[] roles;
@@ -13,12 +14,35 @@ public class User {
     private String institution;
     private String field;
     private BigInteger phone;
-    private Date birthdate;
+    private String birthdate;
     private byte[] image;
     private int role;
     private Date registeredDate;
     private int masteredSubject;
     private boolean isVerified;
+
+    public User() {
+        super();
+    }
+
+    public User(int id, String email, String[] roles, String password, String firstName, String lastName, String institution, String field, BigInteger phone, String birthdate, byte[] image, int role, Date registeredDate, int masteredSubject, boolean isVerified) {
+        super();
+        this.id = id;
+        this.email = email;
+        this.roles = roles;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.institution = institution;
+        this.field = field;
+        this.phone = phone;
+        this.birthdate = birthdate;
+        this.image = image;
+        this.role = role;
+        this.registeredDate = registeredDate;
+        this.masteredSubject = masteredSubject;
+        this.isVerified = isVerified;
+    }
 
     public int getId() {
         return id;
@@ -92,11 +116,11 @@ public class User {
         this.phone = phone;
     }
 
-    public Date getBirthdate() {
+    public String getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(String birthdate) {
         this.birthdate = birthdate;
     }
 
