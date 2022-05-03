@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">projetMobile</string>
+    <string name="app_name">Swift</string>
+    <string name="email">Courriel</string>
+    <string name="password">Mot de passe</string>
+    <string name="login">Connexion</string>
+    <string name="existingUser">Vous avez déjà un compte?</string>
+    <string name="bithdate">Date de naissance</string>
+    <string name="passwordConfirm">Confirmer le mot de passe</string>
+    <string name="loginHere"><u>Connectez-vous ici</u></string>
 </resources>
