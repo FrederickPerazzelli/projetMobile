@@ -18,7 +18,7 @@ public class User {
     private int role;
     private Date registeredDate;
     private int masteredSubject;
-    private boolean isVerfied;
+    private boolean isVerified;
 
     public int getId() {
         return id;
@@ -132,11 +132,11 @@ public class User {
         this.masteredSubject = masteredSubject;
     }
 
-    public boolean isVerfied() {
-        return isVerfied;
+    public boolean isVerified() {
+        return isVerified;
     }
 
-    public void setVerfied(boolean verfied) {
-        isVerfied = verfied;
+    public void setVerified(boolean verified) {
+        isVerified = verified;
     }
 }
