@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">projetMobile</string>
+    <string name="app_name">Swift</string>
+    <string name="splashScreenTitle">Swift</string>
+    <string name="copyright">Réaliser par : Frédérick Perazzelli, Jean-Nyckolas Roy</string>
+
+    <string name="connexion">Connexion</string>
+    <string name="demande">Demandes</string>
+    <string name="rencontre">Rencontres</string>
+    <string name="profil">Mon Profil</string>
+
+
 </resources>
