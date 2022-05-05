@@ -46,20 +46,20 @@ public class RegisterActivity extends AppCompatActivity {
                     user.setBirthdate(dateText);
                     user.setPassword(pass1);
 
-                    /*Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
+                    Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
                     intent.putExtra("user", user);
-                    startActivity(intent);*/
+                    startActivity(intent);
                 }
             }
         });
 
         TextView gotoLogin = findViewById(R.id.gotoLogin);
-        /*gotoLogin.setOnClickListener(new View.OnClickListener() {
+        gotoLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 
 

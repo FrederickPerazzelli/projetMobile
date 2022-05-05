@@ -7,4 +7,7 @@
     <string name="bithdate">Date de naissance</string>
     <string name="passwordConfirm">Confirmer le mot de passe</string>
     <string name="loginHere"><u>Connectez-vous ici</u></string>
+    <string name="register">Inscription</string>
+    <string name="newUser">Vous êtes nouveau sur Swift?</string>
+    <string name="registerHere"><u>Créez-vous un compte ici</u></string>
 </resources>
