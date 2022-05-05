@@ -57,7 +57,7 @@
         android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="15dp"
@@ -73,7 +73,7 @@
         android:text="@string/newUser" />
 
     <TextView
-        android:id="@+id/gotoLogin"
+        android:id="@+id/gotoRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"

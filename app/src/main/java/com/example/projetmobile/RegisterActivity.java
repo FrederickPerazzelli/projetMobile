@@ -10,11 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 public class RegisterActivity extends AppCompatActivity {
     private EditText email;
     private EditText date;
     private EditText password;
     private EditText confirmPassword;
+    private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +49,42 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Les mots de passe ne correspondent pas", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    User user = new User();
-                    user.setEmail(emailText);
-                    user.setBirthdate(dateText);
-                    user.setPassword(pass1);
+                    queue = Volley.newRequestQueue(RegisterActivity.this);
 
-                    Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
-                    intent.putExtra("user", user);
-                    startActivity(intent);
+                    String url = "http://192.168.2.13:8000/api/compareEmail/"+emailText;
+
+                    // Request a string response from the provided URL.
+                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    // Reste à traiter la réponse
+                                    response = response.substring(response.indexOf('\"')).replace("\"", "");
+
+                                    if (response.equals("True")) {
+                                        Toast.makeText(RegisterActivity.this, "Ce courriel est déjà utilisé", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else {
+                                        User user = new User();
+                                        user.setEmail(emailText);
+                                        user.setBirthdate(dateText);
+                                        user.setPassword(pass1);
+
+                                        Intent intent = new Intent(RegisterActivity.this, ProfileActivity.class);
+                                        intent.putExtra("user", user);
+                                        startActivity(intent);
+                                    }
+                                }
+                            },
+                            new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    Toast.makeText(RegisterActivity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                    // Add the request to the RequestQueue.
+                    queue.add(stringRequest);
                 }
             }
         });
