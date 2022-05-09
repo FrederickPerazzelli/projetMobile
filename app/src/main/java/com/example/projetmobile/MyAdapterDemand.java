@@ -13,10 +13,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.json.JSONArray;
+
+import java.util.ArrayList;
+
 public class MyAdapterDemand extends RecyclerView.Adapter<MyAdapterDemand.MyViewHolder>{
 
     private Context context;
-    private Demand listDemand[];
+    private ArrayList<String> demandsTitle = new ArrayList<String>();
+    private ArrayList<String> demandsStatus = new ArrayList<String>();
+    private ArrayList<String> demandsComments = new ArrayList<String>();
+    private ArrayList<String> demandsCategory = new ArrayList<String>();
+    private ArrayList<String> demandsPublishInfo = new ArrayList<String>();
 
     @NonNull
     @Override
@@ -26,26 +34,29 @@ public class MyAdapterDemand extends RecyclerView.Adapter<MyAdapterDemand.MyView
         return new MyViewHolder(view);
     }
 
-    public MyAdapterDemand(Context context, Demand ListDemand[]){
+    public MyAdapterDemand(Context context, ArrayList<String> demandsTitle, ArrayList<String> demandsStatus,
+                           ArrayList<String> demandsComments, ArrayList<String> demandsCategory, ArrayList<String> demandsPublishInfo){
         this.context = context;
-        this.listDemand = ListDemand;
+        this.demandsTitle = demandsTitle;
+        this.demandsStatus = demandsStatus;
+        this.demandsComments = demandsComments;
+        this.demandsCategory = demandsCategory;
+        this.demandsPublishInfo = demandsPublishInfo;
     }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(@NonNull MyAdapterDemand.MyViewHolder holder, int position) {
-        holder.demandsTitle.setText(listDemand[position].get_title());
-        holder.demandsComments.setText(listDemand[position].get_comments());
-        holder.demandsStatus.setText(listDemand[position].get_status());
-        holder.demandsCategory.setText(listDemand[position].get_category());
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
-        String strDate = dateFormat.format(listDemand[position].get_publishDate());
-        holder.demandsPublishInfo.setText(strDate);
+        holder.demandsTitle.setText(demandsTitle.get(position));
+        holder.demandsComments.setText(demandsComments.get(position));
+        holder.demandsStatus.setText(demandsStatus.get(position));
+        holder.demandsCategory.setText(demandsCategory.get(position));
+        holder.demandsPublishInfo.setText(demandsPublishInfo.get(position));
     }
 
     @Override
-    public int getItemCount() { return listDemand.length; }
+    public int getItemCount() { return demandsTitle.size(); }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
