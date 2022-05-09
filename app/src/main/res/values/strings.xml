@@ -8,5 +8,8 @@
     <string name="rencontre">Rencontres</string>
     <string name="profil">Mon Profil</string>
 
+    <string name="buttonDemand">Consulter</string>
+    <string name="TitleListDemands">Les Demandes</string>
+    <string name="wait">Un moment s.v.p..</string>
 
 </resources>

@@ -13,10 +13,12 @@
         android:usesCleartextTraffic="true">
 
 
+        <activity android:name=".ListDemandsActivity"> </activity>
+        <activity android:name=".RequestDemandsActivity"> </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
