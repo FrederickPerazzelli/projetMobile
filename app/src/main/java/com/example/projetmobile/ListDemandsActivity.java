@@ -25,9 +25,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ListDemandsActivity extends AppCompatActivity {
+public class ListDemandsActivity extends AppCompatActivity{
 
     RecyclerView recyclerView;
+    private ArrayList<String> demandsId = new ArrayList<String>();
     private ArrayList<String> demandsTitle = new ArrayList<String>();
     private ArrayList<String> demandsStatus = new ArrayList<String>();
     private ArrayList<String> demandsComments = new ArrayList<String>();
@@ -53,6 +54,7 @@ public class ListDemandsActivity extends AppCompatActivity {
 
             for (int i = 0; i < jsonArr.length(); i++)
             {
+                demandsId.add(jsonArr.getJSONObject(i).getString("id"));
                 demandsTitle.add(jsonArr.getJSONObject(i).getString("title"));
                 demandsStatus.add(jsonArr.getJSONObject(i).getString("status"));
                 demandsComments.add(jsonArr.getJSONObject(i).getString("comments"));
@@ -65,7 +67,7 @@ public class ListDemandsActivity extends AppCompatActivity {
                 demandsPublishInfo.add(publishInfo);
             }
 
-            MyAdapterDemand myAdapter = new MyAdapterDemand(this, demandsTitle, demandsStatus,
+            MyAdapterDemand myAdapter = new MyAdapterDemand(this, demandsId, demandsTitle, demandsStatus,
                     demandsComments, demandsCategory, demandsPublishInfo);
             recyclerView.setAdapter(myAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));

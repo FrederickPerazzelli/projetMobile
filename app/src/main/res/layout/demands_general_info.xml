@@ -21,8 +21,8 @@
                 android:layout_height="match_parent" >
 
                 <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
                     android:layout_weight=".100"
                     android:background="@android:color/black"/>
             </TableRow>
@@ -50,6 +50,18 @@
                     android:gravity="end"
                     android:textStyle="bold"
                     android:textSize="14sp"
+                    android:background="#FFFFFFFF"
+                    android:text="placeHolderStatus" />
+
+                <TextView
+                    android:id="@+id/demandsId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".01"
+                    android:layout_marginEnd="5sp"
+                    android:gravity="end"
+                    android:textColor="#FFFFFF"
+                    android:textSize="1sp"
                     android:background="#FFFFFFFF"
                     android:text="placeHolderStatus" />
 
@@ -116,7 +128,7 @@
                 android:layout_height="match_parent" >
 
                 <View
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_weight=".100"
                     android:background="@android:color/black"/>

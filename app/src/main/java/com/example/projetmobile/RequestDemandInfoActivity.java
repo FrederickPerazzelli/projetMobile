@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -14,27 +16,29 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-
-public class RequestDemandsActivity extends AppCompatActivity {
+public class RequestDemandInfoActivity extends AppCompatActivity {
 
     ProgressBar circularProgressBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.request_list_demands);
+        setContentView(R.layout.request_demand_info);
 
-        circularProgressBar = (ProgressBar) findViewById(R.id.circular_progress);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("bundle");
+        String id = bundle.getString("demand");
+
+        circularProgressBar = (ProgressBar) findViewById(R.id.circular_progress_info);
         circularProgressBar.setVisibility(View.INVISIBLE);
 
-        ShowProgressBarTask showTask = new ShowProgressBarTask();
+        RequestDemandInfoActivity.ShowProgressBarTask showTask = new RequestDemandInfoActivity.ShowProgressBarTask();
         showTask.execute();
 
         final TextView responseReceived = (TextView) findViewById(R.id.stringRequests);
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://192.168.159.1:8000/api/demandList";
+        String url = ("http://192.168.159.1:8000/api/demandList/" + id);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -42,9 +46,9 @@ public class RequestDemandsActivity extends AppCompatActivity {
 
                 String responseReceived = response.substring(response.indexOf("["));
 
-                Intent intent = new Intent(RequestDemandsActivity.this , ListDemandsActivity.class);
+                Intent intent = new Intent(RequestDemandInfoActivity.this , ListDemandsActivity.class);
                 Bundle b = new Bundle();
-                b.putString("listDemands", responseReceived);
+                b.putString("demandInfo", responseReceived);
                 intent.putExtra("bundle", b);
 
                 startActivity(intent);
