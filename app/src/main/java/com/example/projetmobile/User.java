@@ -17,6 +17,7 @@ public class User implements Serializable {
     private String birthdate;
     private byte[] image;
     private int role;
+    private boolean validAccount;
     private Date registeredDate;
     private int masteredSubject;
     private boolean isVerified;
@@ -25,7 +26,7 @@ public class User implements Serializable {
         super();
     }
 
-    public User(int id, String email, String[] roles, String password, String firstName, String lastName, String institution, String field, BigInteger phone, String birthdate, byte[] image, int role, Date registeredDate, int masteredSubject, boolean isVerified) {
+    public User(int id, String email, String[] roles, String password, String firstName, String lastName, String institution, String field, BigInteger phone, String birthdate, byte[] image, int role, boolean validAccount, Date registeredDate, int masteredSubject, boolean isVerified) {
         super();
         this.id = id;
         this.email = email;
@@ -39,6 +40,7 @@ public class User implements Serializable {
         this.birthdate = birthdate;
         this.image = image;
         this.role = role;
+        this.validAccount = validAccount;
         this.registeredDate = registeredDate;
         this.masteredSubject = masteredSubject;
         this.isVerified = isVerified;
@@ -131,6 +133,10 @@ public class User implements Serializable {
     public void setImage(byte[] image) {
         this.image = image;
     }
+
+    public boolean isValidAccount() { return validAccount; }
+
+    public void setValidAccount(boolean validAccount) { this.validAccount = validAccount; }
 
     public int getRole() {
         return role;
