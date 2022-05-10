@@ -10,4 +10,14 @@
     <string name="register">Inscription</string>
     <string name="newUser">Vous êtes nouveau sur Swift?</string>
     <string name="registerHere"><u>Créez-vous un compte ici</u></string>
+    <string name="profile">Profil</string>
+    <string name="cancel">Annuler</string>
+    <string name="save">Terminer</string>
+    <string name="firstName">Prénom</string>
+    <string name="lastName">Nom</string>
+    <string name="telephone">Téléphone</string>
+    <string name="institution">Institution</string>
+    <string name="field">Programme d\'étude</string>
+    <string name="generalInfos">Informations générales</string>
+    <string name="studentInfos">Informations académiques</string>
 </resources>
