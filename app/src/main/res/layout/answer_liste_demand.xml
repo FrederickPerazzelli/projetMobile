@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                 <View
                     android:id="@+id/view2"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
+                    android:layout_height="1dp"
                     android:layout_weight=".100"
                     android:background="@android:color/black" />
             </TableRow>
