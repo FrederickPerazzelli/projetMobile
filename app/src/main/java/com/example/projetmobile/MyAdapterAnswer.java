@@ -28,7 +28,7 @@ public class MyAdapterAnswer extends RecyclerView.Adapter<MyAdapterAnswer.MyView
     @Override
     public MyAdapterAnswer.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.demands_general_info, parent, false);
+        View view = inflater.inflate(R.layout.answer_liste_demand, parent, false);
         return new MyAdapterAnswer.MyViewHolder(view);
     }
 

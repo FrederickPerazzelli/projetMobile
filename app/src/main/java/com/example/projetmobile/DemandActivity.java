@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -40,6 +41,8 @@ public class DemandActivity extends AppCompatActivity {
         TextView demandCategory = (TextView)findViewById(R.id.demandCategory);
         TextView demandComments = (TextView)findViewById(R.id.demandComments);
 
+        Toast.makeText(this, bundle.getString("answerInfo"), Toast.LENGTH_SHORT).show();
+
         try {
 
             JSONArray jsonArrDemand = new JSONArray(demandInfo);
@@ -47,15 +50,18 @@ public class DemandActivity extends AppCompatActivity {
             recyclerView = (RecyclerView)findViewById(R.id.demandRecycler);
 
             // set text Demand
-            demandId.setText(jsonArrDemand.getJSONObject(0).getString("id"));
+            String idDemand = ("#" + jsonArrDemand.getJSONObject(0).getString("id"));
+            demandId.setText(idDemand);
             demandTitle.setText(jsonArrDemand.getJSONObject(0).getString("title"));
-            demandSubject.setText(jsonArrDemand.getJSONObject(0).getString("subject"));
+            String subjectDemand = (" Sujet : " + jsonArrDemand.getJSONObject(0).getString("subject"));
+            demandSubject.setText(subjectDemand);
             String demandPublishInfo = ("Écrit par " + jsonArrDemand.getJSONObject(0).getString("first_name") + " " +
                     jsonArrDemand.getJSONObject(0).getString("last_name") + " le " +
                     jsonArrDemand.getJSONObject(0).getString("publish_date").substring(0,10));
             demandPublishDate.setText(demandPublishInfo);
             demandStatus.setText(jsonArrDemand.getJSONObject(0).getString("status"));
-            demandCategory.setText(jsonArrDemand.getJSONObject(0).getString("category"));
+            String categoryDemand = (" Catégorie : " + jsonArrDemand.getJSONObject(0).getString("category"));
+            demandCategory.setText(categoryDemand);
             demandComments.setText(jsonArrDemand.getJSONObject(0).getString("comments"));
 
 
@@ -67,7 +73,7 @@ public class DemandActivity extends AppCompatActivity {
 
                 String publishInfo = ("Écrit par " + jsonArrAnswer.getJSONObject(i).getString("first_name") + " " +
                         jsonArrAnswer.getJSONObject(i).getString("last_name") + " le " +
-                        jsonArrAnswer.getJSONObject(i).getString("publish_date").substring(0,10));
+                        jsonArrAnswer.getJSONObject(i).getString("answer_date").substring(0,10));
                 answerDate.add(publishInfo);
             }
 
