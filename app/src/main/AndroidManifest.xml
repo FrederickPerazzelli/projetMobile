@@ -16,6 +16,8 @@
         <activity android:name=".ListDemandsActivity"> </activity>
         <activity android:name=".RequestDemandsActivity"> </activity>
         <activity android:name=".RequestDemandInfoActivity"> </activity>
+        <activity android:name=".RequestDemandAnswersActivity"> </activity>
+        <activity android:name=".DemandActivity"> </activity>
 
         <activity
             android:name=".MainActivity"

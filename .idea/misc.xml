@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/activity_main.xml" value="0.14945652173913043" />
-        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/demands_general_info.xml" value="0.25" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/answer_liste_demand.xml" value="0.1" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/demand.xml" value="0.14566929133858267" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/demands_general_info.xml" value="0.16494845360824742" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/list_demands.xml" value="0.22" />
-        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_demand_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_demand_answer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_demand_info.xml" value="0.1" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_list_demands.xml" value="0.20416666666666666" />
       </map>
     </option>

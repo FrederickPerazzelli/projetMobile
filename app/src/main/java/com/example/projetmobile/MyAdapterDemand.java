@@ -64,7 +64,7 @@ public class MyAdapterDemand extends RecyclerView.Adapter<MyAdapterDemand.MyView
 
                 Intent intent = new Intent(view.getContext() , RequestDemandInfoActivity.class);
                 Bundle b = new Bundle();
-                b.putString("demand", id);
+                b.putString("id", id);
                 intent.putExtra("bundle", b);
 
                 context.startActivity(intent);

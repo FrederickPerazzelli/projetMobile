@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".40"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:text="placeHolderTitle" />
 
                 <TextView
@@ -49,8 +49,7 @@
                     android:layout_marginEnd="5sp"
                     android:gravity="end"
                     android:textStyle="bold"
-                    android:textSize="14sp"
-                    android:background="#FFFFFFFF"
+                    android:textSize="16sp"
                     android:text="placeHolderStatus" />
 
                 <TextView
@@ -110,7 +109,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".40"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:text="placeHolderCategory" />
 
                 <TextView
@@ -119,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".60"
                     android:gravity="end"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:text="placeHolderNomEtPublishDate" />
             </TableRow>
 

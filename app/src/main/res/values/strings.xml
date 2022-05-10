@@ -13,6 +13,10 @@
     <string name="wait">Un moment s.v.p..</string>
 
 
+    <string name="TitleDemand">La Demande</string>
+    <string name="question">Question :</string>
+    <string name="repondre">Répondre</string>
+    <string name="reponse">Réponse :</string>
 
 
 </resources>
