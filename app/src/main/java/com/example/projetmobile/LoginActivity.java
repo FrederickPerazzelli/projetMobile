@@ -93,6 +93,9 @@ public class LoginActivity extends AppCompatActivity {
                                         DBManager dbManager = new DBManager();
                                         dbManager.setupDBConnection(LoginActivity.this);
                                         dbManager.setUser(user);
+
+                                        Intent intent = new Intent(LoginActivity.this, RequestDemandsActivity.class);
+                                        startActivity(intent);
                                     }
                                 }
                             },

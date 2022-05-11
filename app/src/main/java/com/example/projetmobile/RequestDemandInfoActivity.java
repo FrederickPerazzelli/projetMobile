@@ -38,7 +38,7 @@ public class RequestDemandInfoActivity extends AppCompatActivity {
         final TextView responseReceived = (TextView) findViewById(R.id.stringRequests);
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = ("http://192.168.159.1:8000/api/demand/" + id);
+        String url = ("http://192.168.2.13:8000/api/demand/" + id);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -94,7 +94,7 @@ public class RequestDemandInfoActivity extends AppCompatActivity {
         final TextView responseReceived = (TextView) findViewById(R.id.stringRequests);
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = ("http://192.168.159.1:8000/api/answerListDemand/" + id);
+        String url = ("http://192.168.2.13:8000/api/answerListDemand/" + id);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override

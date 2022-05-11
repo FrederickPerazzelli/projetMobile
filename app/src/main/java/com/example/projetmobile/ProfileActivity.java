@@ -75,7 +75,7 @@ public class ProfileActivity extends AppCompatActivity {
                     if (!field.equals(""))
                         user.setField(field);
                     if (!phone.equals(""))
-                        user.setPhone(new BigInteger(phone));
+                        user.setPhone(new BigInteger(phone.replaceAll("-", "")));
                     user.setBirthdate(user.getBirthdate().replaceAll("/", "-"));
 
                     queue = Volley.newRequestQueue(ProfileActivity.this);
@@ -111,6 +111,7 @@ public class ProfileActivity extends AppCompatActivity {
                                     DBManager dbManager = new DBManager();
                                     dbManager.setupDBConnection(ProfileActivity.this);
                                     dbManager.setUser(user);
+                                    finish();
                                 }
                             },
                             new Response.ErrorListener() {
