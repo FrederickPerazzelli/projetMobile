@@ -22,6 +22,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.BigInteger;
+
 public class LoginActivity extends AppCompatActivity {
     private EditText editEmail;
     private EditText editPassword;
@@ -70,6 +72,27 @@ public class LoginActivity extends AppCompatActivity {
                                             e.printStackTrace();
                                         }
                                         Toast.makeText(LoginActivity.this, error, Toast.LENGTH_SHORT).show();
+                                    }
+                                    else {
+                                        User user = new User();
+                                        try {
+                                            user.setId(response.getInt("id"));
+                                            user.setEmail(response.getString("email"));
+                                            user.setFirstName(response.getString("firstName"));
+                                            user.setLastName(response.getString("lastName"));
+                                            user.setInstitution(response.getString("institution"));
+                                            user.setField(response.getString("field"));
+                                            if (!response.isNull("phone"))
+                                                user.setPhone(new BigInteger(response.get("phone").toString()));
+                                            user.setInstitution(response.getString("institution"));
+                                            user.setBirthdate(response.get("birthdate").toString());
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+
+                                        DBManager dbManager = new DBManager();
+                                        dbManager.setupDBConnection(LoginActivity.this);
+                                        dbManager.setUser(user);
                                     }
                                 }
                             },
