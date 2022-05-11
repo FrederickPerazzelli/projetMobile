@@ -1,155 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewDemandActivity"
-    android:background="@color/pink">
+    android:padding="55dp"
+    android:background="@color/mainColor"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".NewDemandActivity">
 
     <TextView
         android:id="@+id/TitleNewDemand"
-        android:layout_width="351dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
         android:text="@string/nouvelle_demande"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
-        android:gravity="center"
-        android:textStyle="bold"/>
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164" />
 
     <TextView
         android:id="@+id/editTitleNewDemand"
-        android:layout_width="165dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="108dp"
-        android:text="@string/titre"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/titre"
+        android:textSize="32sp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="379dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="144dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sendTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:hint="@string/titre"
-            android:imeOptions="actionDone"
-            android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/sendTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/TitleSubject"
-        android:layout_width="163dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="216dp"
-        android:text="@string/sujet"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/sujet"
+        android:textSize="32sp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        android:layout_width="379dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="252dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sendSubject"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:hint="@string/sujet"
-            android:imeOptions="actionDone"
-            android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
+    <EditText
+        android:id="@+id/sendSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/TitleCategory"
-        android:layout_width="163dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="320dp"
-        android:text="@string/categorie"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        android:text="@string/categorie"
+        android:textSize="16sp"/>
 
     <Spinner
         android:id="@+id/category_spinner"
-        android:layout_width="379dp"
+        android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="352dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        android:background="@drawable/input"
+        android:ems="10" />
+
 
     <TextView
         android:id="@+id/TitleQuestion"
-        android:layout_width="163dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="404dp"
-        android:text="@string/question"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/question"
+        android:textSize="32sp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="379dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="436dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sendQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:hint="@string/question"
-            android:background="@color/white"
-            android:gravity="bottom"
-            android:imeOptions="actionDone"
-            android:singleLine="true"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/sendQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/sendDemand"
-        android:layout_width="181dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="600dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:background="@drawable/button"
         android:text="@string/envoyer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
