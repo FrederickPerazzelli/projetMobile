@@ -20,4 +20,13 @@
     <string name="field">Programme d\'étude</string>
     <string name="generalInfos">Informations générales</string>
     <string name="studentInfos">Informations académiques</string>
+    <string name="splashScreenTitle">Swift</string>
+    <string name="copyright">Réaliser par : Frédérick Perazzelli, Jean-Nyckolas Roy</string>
+
+    <string name="connexion">Connexion</string>
+    <string name="demande">Demandes</string>
+    <string name="rencontre">Rencontres</string>
+    <string name="profil">Mon Profil</string>
+
+
 </resources>

@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetMobile"
         android:usesCleartextTraffic="true">
+
+
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -27,6 +29,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
