@@ -68,6 +68,15 @@ public class ProfileActivity extends AppCompatActivity {
                 else {
                     Intent current = getIntent();
                     User user = (User) current.getSerializableExtra("user");
+                    user.setFirstName(firstName);
+                    user.setLastName(lastName);
+                    if (!institution.equals(""))
+                        user.setInstitution(institution);
+                    if (!field.equals(""))
+                        user.setField(field);
+                    if (!phone.equals(""))
+                        user.setPhone(new BigInteger(phone));
+                    user.setBirthdate(user.getBirthdate().replaceAll("/", "-"));
 
                     queue = Volley.newRequestQueue(ProfileActivity.this);
 
@@ -99,7 +108,9 @@ public class ProfileActivity extends AppCompatActivity {
                             new Response.Listener<JSONObject>() {
                                 @Override
                                 public void onResponse(JSONObject response) {
-                                    //Toast.makeText(ProfileActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+                                    DBManager dbManager = new DBManager();
+                                    dbManager.setupDBConnection(ProfileActivity.this);
+                                    dbManager.setUser(user);
                                 }
                             },
                             new Response.ErrorListener() {
