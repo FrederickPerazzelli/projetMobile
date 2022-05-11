@@ -47,4 +47,6 @@
 
 
 
+    <string name="complaint">Plainte</string>
+    <string name="description">Description</string>
 </resources>
