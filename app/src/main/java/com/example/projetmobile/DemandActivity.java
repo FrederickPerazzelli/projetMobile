@@ -3,6 +3,8 @@ package com.example.projetmobile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +31,7 @@ public class DemandActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
+        String id = bundle.getString("id");
         String demandInfo = bundle.getString("demandInfo");
         String answerInfo = bundle.getString("answerInfo");
 
@@ -41,7 +44,7 @@ public class DemandActivity extends AppCompatActivity {
         TextView demandCategory = (TextView)findViewById(R.id.demandCategory);
         TextView demandComments = (TextView)findViewById(R.id.demandComments);
 
-        Toast.makeText(this, bundle.getString("answerInfo"), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, bundle.getString("answerInfo"), Toast.LENGTH_SHORT).show();
 
         try {
 
@@ -84,6 +87,20 @@ public class DemandActivity extends AppCompatActivity {
         }catch (JSONException err){
             Log.d("Error", err.toString());
         }
+
+        Button buttonAnswer = (Button) findViewById(R.id.AnswerButton);
+        buttonAnswer.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext() , NewAnswerActivity.class);
+                Bundle b = new Bundle();
+                b.putString("demandInfo", demandInfo);
+                intent.putExtra("bundle", b);
+
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
 }

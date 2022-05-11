@@ -18,6 +18,7 @@
         <activity android:name=".RequestDemandInfoActivity"> </activity>
         <activity android:name=".RequestDemandAnswersActivity"> </activity>
         <activity android:name=".DemandActivity"> </activity>
+        <activity android:name=".NewAnswerActivity"> </activity>
 
         <activity
             android:name=".MainActivity"

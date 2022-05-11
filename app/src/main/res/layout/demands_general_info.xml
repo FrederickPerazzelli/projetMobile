@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -18,7 +18,8 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+>
 
                 <View
                     android:layout_width="match_parent"
@@ -30,27 +31,29 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 >
 
                 <TextView
                     android:id="@+id/demandsTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".40"
+                    android:layout_weight=".38"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:text="placeHolderTitle" />
 
                 <TextView
                     android:id="@+id/demandsStatus"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".20"
+                    android:layout_weight=".22"
                     android:layout_marginEnd="5sp"
                     android:gravity="end"
                     android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:text="placeHolderStatus" />
+                    android:textSize="18sp"
+                    android:text="placeHolderStatus"
+                    />
 
                 <TextView
                     android:id="@+id/demandsId"
@@ -59,10 +62,10 @@
                     android:layout_weight=".01"
                     android:layout_marginEnd="5sp"
                     android:gravity="end"
-                    android:textColor="#FFFFFF"
                     android:textSize="1sp"
-                    android:background="#FFFFFFFF"
-                    android:text="placeHolderStatus" />
+                    android:text="placeHolderStatus"
+                    android:background="@color/white"
+                    android:textColor="#FFFFFF"/>
 
                 <Button
                     android:id="@+id/goToDemand"
@@ -78,40 +81,47 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+>
 
                 <TextView
                     android:id="@+id/demandsComments"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".100"
-                    android:textSize="16sp"
-                    android:text="placeHolderComments" />
+                    android:textSize="18sp"
+                    android:text="placeHolderComments"
+
+                    android:textStyle="bold"/>
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+>
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_weight=".100"
-                    android:background="@android:color/darker_gray"/>
+                    android:background="@android:color/black"/>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+
+                >
 
                 <TextView
                     android:id="@+id/demandsCategory"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".40"
-                    android:textSize="16sp"
-                    android:text="placeHolderCategory" />
+                    android:textSize="18sp"
+                    android:text="placeHolderCategory"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/demandsPublishInfo"
@@ -119,13 +129,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".60"
                     android:gravity="end"
-                    android:textSize="16sp"
-                    android:text="placeHolderNomEtPublishDate" />
+                    android:textSize="18sp"
+                    android:text="placeHolderNomEtPublishDate"
+/>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+>
 
                 <View
                     android:layout_width="match_parent"

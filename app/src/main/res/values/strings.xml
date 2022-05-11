@@ -16,7 +16,11 @@
     <string name="TitleDemand">La Demande</string>
     <string name="question">Question :</string>
     <string name="repondre">Répondre</string>
-    <string name="reponse">Réponse :</string>
+    <string name="reponse">Réponse</string>
+    <string name="newanswer">"Votre réponse : "</string>
+    <string name="votre_r_ponse">Votre Réponse :</string>
+    <string name="entrez_votre_r_ponse">Entrez votre réponse</string>
+    <string name="envoyer">Envoyer</string>
 
 
 </resources>
