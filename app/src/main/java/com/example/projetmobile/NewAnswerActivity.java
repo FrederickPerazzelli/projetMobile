@@ -104,7 +104,7 @@ public class NewAnswerActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
 
-                                //Toast.makeText(getApplicationContext(), "Erreur" , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Erreur" , Toast.LENGTH_SHORT).show();
                             }
                         });
 
