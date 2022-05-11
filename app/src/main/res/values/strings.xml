@@ -20,4 +20,6 @@
     <string name="field">Programme d\'étude</string>
     <string name="generalInfos">Informations générales</string>
     <string name="studentInfos">Informations académiques</string>
+    <string name="complaint">Plainte</string>
+    <string name="description">Description</string>
 </resources>
