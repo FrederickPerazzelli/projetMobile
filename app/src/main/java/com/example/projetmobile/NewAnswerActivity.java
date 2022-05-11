@@ -19,8 +19,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,7 +31,7 @@ public class NewAnswerActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.new_answer);
+            setContentView(R.layout.activity_new_answer);
 
             Intent intent = getIntent();
             Bundle bundle = intent.getBundleExtra("bundle");

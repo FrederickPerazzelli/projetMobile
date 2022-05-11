@@ -1,13 +1,10 @@
 package com.example.projetmobile;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,7 +25,7 @@ public class MyAdapterAnswer extends RecyclerView.Adapter<MyAdapterAnswer.MyView
     @Override
     public MyAdapterAnswer.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.answer_liste_demand, parent, false);
+        View view = inflater.inflate(R.layout.activity_recycler_demand, parent, false);
         return new MyAdapterAnswer.MyViewHolder(view);
     }
 

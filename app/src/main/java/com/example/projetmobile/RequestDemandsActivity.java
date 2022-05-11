@@ -23,7 +23,7 @@ public class RequestDemandsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.request_list_demands);
+        setContentView(R.layout.activity_progress_bar_list_demands);
 
         circularProgressBar = (ProgressBar) findViewById(R.id.circular_progress);
         circularProgressBar.setVisibility(View.INVISIBLE);

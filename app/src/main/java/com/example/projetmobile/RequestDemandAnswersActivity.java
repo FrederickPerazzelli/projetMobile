@@ -22,7 +22,7 @@ public class RequestDemandAnswersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.request_demand_answer);
+        setContentView(R.layout.activity_progress_bar_list_answer);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");

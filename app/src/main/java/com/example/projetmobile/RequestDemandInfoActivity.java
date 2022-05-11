@@ -23,7 +23,7 @@ public class RequestDemandInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.request_demand_info);
+        setContentView(R.layout.activity_progress_bar_demand_info);
 
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");

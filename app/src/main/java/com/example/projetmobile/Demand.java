@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class Demand implements Serializable{
 
-    private int _id;
     private String _title;
     private String _subject;
     private int _category;
@@ -22,7 +21,6 @@ public class Demand implements Serializable{
     // constructor
     public Demand(int id, String title, String subject, int category, Date publishDate, String comments, int user, int status){
         super();
-        _id = id;
         _title = title;
         _subject = subject;
         _category = category;
@@ -31,10 +29,6 @@ public class Demand implements Serializable{
         _user = user;
         _status = status;
     }
-
-    // Id
-    public int get_id(){ return _id; }
-    public void set_id(int id) { _id = id; }
 
     // title
     public String get_title(){ return _title; }

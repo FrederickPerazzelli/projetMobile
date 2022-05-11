@@ -4,11 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/activity_main.xml" value="0.14945652173913043" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/activity_new_answer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/activity_new_demand.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/activity_recycler_demand.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/answer_liste_demand.xml" value="0.14232209737827714" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/demand.xml" value="0.22" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/demands_general_info.xml" value="0.2" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/list_demands.xml" value="0.22" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/new_answer.xml" value="0.1" />
+        <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/new_demand.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_demand_answer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_demand_info.xml" value="0.1" />
         <entry key="..\:/Users/Lise&amp;Andre/Desktop/Projet_tuteur/projetMobile/app/src/main/res/layout/request_list_demands.xml" value="0.20416666666666666" />

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-                Intent intent = new Intent(MainActivity.this, RequestDemandsActivity.class);
+                Intent intent = new Intent(MainActivity.this, NewDemandActivity.class);
                 startActivity(intent);
             }
         }, 2000);

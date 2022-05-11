@@ -30,7 +30,7 @@ public class MyAdapterDemand extends RecyclerView.Adapter<MyAdapterDemand.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.demands_general_info, parent, false);
+        View view = inflater.inflate(R.layout.activity_recycler_list_demands, parent, false);
         return new MyViewHolder(view);
     }
 
