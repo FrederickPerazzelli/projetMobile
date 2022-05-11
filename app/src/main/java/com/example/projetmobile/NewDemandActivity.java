@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,13 +35,14 @@ public class NewDemandActivity extends AppCompatActivity {
 
     private ArrayList<String> categoryId = new ArrayList<String>();
     private ArrayList<String> categoryName = new ArrayList<String>();
+    private String idCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_demand);
 
-
+        Spinner categorySpinner = (Spinner) findViewById(R.id.category_spinner);
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = ("http://192.168.159.1:8000/api/categoryList");
 
@@ -58,7 +60,7 @@ public class NewDemandActivity extends AppCompatActivity {
                         categoryName.add(jsonArrCategory.getJSONObject(i).getString("name"));
                     }
 
-                    populateSpinner(categoryName);
+                    populateSpinner(categorySpinner, categoryName);
 
                 }catch (JSONException err){
                     Log.d("Error", err.toString());
@@ -99,8 +101,18 @@ public class NewDemandActivity extends AppCompatActivity {
                     jsonBody.put("subject", subject);
 
                     // category
+                    categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                            idCategory = categoryId.get(position);
+                        }
 
-
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+                            idCategory = categoryId.get(0);
+                        }
+                    });
+                    jsonBody.put("category", idCategory);
 
 
                     // Date time
@@ -156,13 +168,14 @@ public class NewDemandActivity extends AppCompatActivity {
     }
 
     // Met les information dans le spinner
-    public void populateSpinner(ArrayList<String> data){
-        Spinner categorySpinner = (Spinner) findViewById(R.id.category_spinner);
+    public void populateSpinner(Spinner categorySpinner, ArrayList<String> data){
+
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, data);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorySpinner.setAdapter(dataAdapter);
     }
+
 
 }

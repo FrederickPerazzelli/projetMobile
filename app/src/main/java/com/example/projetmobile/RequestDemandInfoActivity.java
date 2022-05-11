@@ -45,17 +45,8 @@ public class RequestDemandInfoActivity extends AppCompatActivity {
             public void onResponse(String response) {
 
                 String responseReceived = response.substring(response.indexOf("["));
+                getAnswer(id, responseReceived );
 
-                Intent intent = new Intent(RequestDemandInfoActivity.this , RequestDemandAnswersActivity.class);
-
-                Bundle b = new Bundle();
-                b.putString("id", id);
-                b.putString("demandInfo", responseReceived);
-                intent.putExtra("bundle", b);
-
-
-                startActivity(intent);
-                finish();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -97,6 +88,38 @@ public class RequestDemandInfoActivity extends AppCompatActivity {
         protected void onPostExecute (Integer result){
             circularProgressBar.setProgress(View.INVISIBLE);
         }
+    }
+
+    public void getAnswer(String id, String demand){
+        final TextView responseReceived = (TextView) findViewById(R.id.stringRequests);
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = ("http://192.168.159.1:8000/api/answerListDemand/" + id);
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                String responseReceived = response.substring(response.indexOf("["));
+
+                Intent intent = new Intent(RequestDemandInfoActivity.this , DemandActivity.class);
+                Bundle b = new Bundle();
+                b.putString("id", id);
+                b.putString("demandInfo", demand);
+                b.putString("answerInfo", responseReceived);
+                intent.putExtra("bundle", b);
+
+                startActivity(intent);
+                finish();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                responseReceived.setText(error.toString());
+            }
+        });
+
+        queue.add(stringRequest);
     }
 
 }
