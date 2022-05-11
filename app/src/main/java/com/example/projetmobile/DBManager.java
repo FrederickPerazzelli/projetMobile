@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.math.BigInteger;
+
 public class DBManager {
     private SQLiteDatabase mydb;
     private Context DBcontext;
@@ -30,5 +32,22 @@ public class DBManager {
         values.put("birthdate", user.getBirthdate());
 
         this.mydb.insert("User", null, values);
+    }
+
+    public User getCurrentUser() {
+        Cursor cursor;
+
+        cursor = mydb.rawQuery("SELECT * FROM User;", null);
+        cursor.moveToFirst();
+        String[] roles = {"ROLE_USER"};
+        User user = new User();
+        user.setId(cursor.getInt(0));
+        /*user.setFirstName(cursor.getString(2));
+        user.setLastName(cursor.getString(3));
+        user.setInstitution(cursor.getString(4));
+        user.setField(cursor.getString(5));
+        user.setPhone(new BigInteger(cursor.getString(6)));*/
+
+        return user;
     }
 }
