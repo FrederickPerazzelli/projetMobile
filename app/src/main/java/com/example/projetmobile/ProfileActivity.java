@@ -86,7 +86,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                     queue = Volley.newRequestQueue(ProfileActivity.this);
 
-                    String url = "http://192.168.2.13:8000/api/addUser";
+                    String url = "http://192.168.159.1:8000/api/addUser";
                     JSONObject jsonBody = new JSONObject();
 
                     try {

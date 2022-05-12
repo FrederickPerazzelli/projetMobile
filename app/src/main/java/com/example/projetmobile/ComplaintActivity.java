@@ -48,7 +48,7 @@ public class ComplaintActivity extends AppCompatActivity {
             public void onClick(View v) {
                 queue = Volley.newRequestQueue(ComplaintActivity.this);
 
-                String url = "http://192.168.2.13:8000/api/addComplaint";
+                String url = "http://192.168.159.1:8000/api/addComplaint";
                 JSONObject jsonBody = new JSONObject();
 
                 DBManager dbManager = new DBManager();

@@ -178,7 +178,16 @@ public class NewDemandActivity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
-                            Toast.makeText(getApplicationContext(), "Erreur" , Toast.LENGTH_SHORT).show();
+                            if(title.equals("")){
+                                Toast.makeText(getApplicationContext(), "Entrez un Titre" , Toast.LENGTH_SHORT).show();
+                            }else if (subject.equals("")){
+                                Toast.makeText(getApplicationContext(), "Entrez un sujet" , Toast.LENGTH_SHORT).show();
+                            }else if (question.equals("")) {
+                                Toast.makeText(getApplicationContext(), "Entrez une question", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(getApplicationContext(), "Erreur" , Toast.LENGTH_SHORT).show();
+                            }
+
                         }
                     });
 

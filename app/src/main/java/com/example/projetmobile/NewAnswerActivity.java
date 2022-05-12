@@ -126,7 +126,11 @@ public class NewAnswerActivity extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error) {
 
-                                Toast.makeText(getApplicationContext(), "Erreur" , Toast.LENGTH_SHORT).show();
+                                if(comment.equals("")){
+                                    Toast.makeText(getApplicationContext(), "Entrez une réponse" , Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "Erreur" , Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
 
