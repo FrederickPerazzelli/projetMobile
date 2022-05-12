@@ -1,3 +1,16 @@
+/****************************************
+ Fichier : newAnswerActivity
+ Auteur : Frédérick Perazzelli-Delorme
+ Fonctionnalité : C7 - Répond a une demande d'aide
+ Date : 10 mai 2022
+ Techniques de l’informatique
+ Vérification :
+ Date Nom Approuvé
+ =========================================================
+ Historique de modifications :
+ Date Nom Description
+ =========================================================
+ ****************************************/
 package com.example.projetmobile;
 
 import android.content.Intent;

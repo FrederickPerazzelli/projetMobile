@@ -1,3 +1,16 @@
+/****************************************
+ Fichier : ListDemands
+ Auteur : Frédérick Perazzelli-Delorme
+ Fonctionnalité : C6 - Affiche la liste de toutes les demandes
+ Date : 5 mai 2022
+ Techniques de l’informatique
+ Vérification :
+ Date Nom Approuvé
+ =========================================================
+ Historique de modifications :
+ Date Nom Description
+ =========================================================
+ ****************************************/
 package com.example.projetmobile;
 
 import android.content.Intent;
@@ -17,7 +30,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
-
 
 public class ListDemandsActivity extends AppCompatActivity{
 

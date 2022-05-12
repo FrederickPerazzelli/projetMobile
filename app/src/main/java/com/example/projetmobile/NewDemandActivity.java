@@ -1,3 +1,16 @@
+/****************************************
+ Fichier : NewDemandActivity
+ Auteur : Frédérick Perazzelli-Delorme
+ Fonctionnalité : C4 - Publie une demande d'aide publique
+ Date : 9 mai 2022
+ Techniques de l’informatique
+ Vérification :
+ Date Nom Approuvé
+ =========================================================
+ Historique de modifications :
+ Date Nom Description
+ =========================================================
+ ****************************************/
 package com.example.projetmobile;
 
 import android.content.Intent;

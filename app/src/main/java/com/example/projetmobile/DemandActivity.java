@@ -1,3 +1,16 @@
+/****************************************
+ Fichier : DemandActivity
+ Auteur : Frédérick Perazzelli-Delorme
+ Fonctionnalité : C6 - Affiche une demande avec chacune de ses réponse.
+ Date : 9 mai 2022
+ Techniques de l’informatique
+ Vérification :
+ Date Nom Approuvé
+ =========================================================
+ Historique de modifications :
+ Date Nom Description
+ =========================================================
+ ****************************************/
 package com.example.projetmobile;
 
 import android.content.Intent;
