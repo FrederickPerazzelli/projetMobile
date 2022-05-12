@@ -111,7 +111,6 @@ public class ProfileActivity extends AppCompatActivity {
                                     DBManager dbManager = new DBManager();
                                     dbManager.setupDBConnection(ProfileActivity.this);
                                     dbManager.setUser(user);
-                                    finish();
                                 }
                             },
                             new Response.ErrorListener() {

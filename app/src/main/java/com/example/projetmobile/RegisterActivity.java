@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 else {
                     queue = Volley.newRequestQueue(RegisterActivity.this);
 
-                    String url = "http://192.168.2.13:8000/api/compareEmail/"+emailText;
+                    String url = "http://192.168.159.1:8000/api/compareEmail/"+emailText;
 
                     // Request a string response from the provided URL.
                     StringRequest stringRequest = new StringRequest(Request.Method.GET, url,

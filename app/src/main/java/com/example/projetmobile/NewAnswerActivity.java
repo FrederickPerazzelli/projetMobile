@@ -4,12 +4,16 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +30,7 @@ import org.json.JSONObject;
 
 public class NewAnswerActivity extends AppCompatActivity {
 
+        private User currentUser;
 
         @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
@@ -66,7 +71,10 @@ public class NewAnswerActivity extends AppCompatActivity {
                             //Toast.makeText(getApplicationContext(), id , Toast.LENGTH_SHORT).show();
 
                             // id du user (dataBase)
-                            jsonBody.put("user", "1");
+                            DBManager dbManager = new DBManager();
+                            dbManager.setupDBConnection(NewAnswerActivity.this);
+                            currentUser = dbManager.getCurrentUser();
+                            jsonBody.put("user", currentUser.getId());
 
                             // Date time
                             String localDate = (java.time.LocalDate.now()).toString();
@@ -77,7 +85,10 @@ public class NewAnswerActivity extends AppCompatActivity {
                             // Nouvelle réponse
                             EditText newAnswer = (EditText)findViewById(R.id.sendAnswer);
                             String comment = newAnswer.getText().toString();
-                            jsonBody.put("comment", comment);
+                            if(!comment.equals("")){
+                                jsonBody.put("comment", comment);
+                            }
+
 
 
                         JsonObjectRequest objectRequest = new JsonObjectRequest (Request.Method.POST, url, jsonBody,
@@ -119,4 +130,35 @@ public class NewAnswerActivity extends AppCompatActivity {
                 Log.d("Error", err.toString());
             }
         }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        switch(item.getItemId()){
+            case R.id.profil:
+                Intent intentProfil = new Intent(this, ProfileActivity.class);
+                startActivity(intentProfil);
+                return true;
+            case R.id.demands:
+                Intent intentDemands = new Intent(this, RequestDemandsActivity.class);
+                startActivity(intentDemands);
+                return true;
+            case R.id.newDemands:
+                Intent intentNewDemands = new Intent(this, NewDemandActivity.class);
+                startActivity(intentNewDemands);
+                return true;
+            case R.id.complaints:
+                Intent intentComplaint = new Intent(this, ComplaintActivity.class);
+                startActivity(intentComplaint);
+                return true;
+            default:
+                return true;
+
+        }
+    }
 }

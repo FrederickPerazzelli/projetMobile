@@ -3,10 +3,14 @@ package com.example.projetmobile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -100,6 +104,38 @@ public class DemandActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.profil:
+                Intent intentProfil = new Intent(this, ProfileActivity.class);
+                startActivity(intentProfil);
+                return true;
+            case R.id.demands:
+                Intent intentDemands = new Intent(this, RequestDemandsActivity.class);
+                startActivity(intentDemands);
+                return true;
+            case R.id.newDemands:
+                Intent intentNewDemands = new Intent(this, NewDemandActivity.class);
+                startActivity(intentNewDemands);
+                return true;
+            case R.id.complaints:
+                Intent intentComplaint = new Intent(this, ComplaintActivity.class);
+                startActivity(intentComplaint);
+                return true;
+            default:
+                return true;
+
+        }
     }
 
 }

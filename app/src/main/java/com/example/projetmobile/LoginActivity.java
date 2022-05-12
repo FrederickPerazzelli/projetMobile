@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                 else {
                     queue = Volley.newRequestQueue(LoginActivity.this);
 
-                    String url = "http://192.168.2.13:8000/api/login";
+                    String url = "http://192.168.159.1:8000/api/login";
                     JSONObject jsonBody = new JSONObject();
 
                     try {
@@ -110,8 +110,8 @@ public class LoginActivity extends AppCompatActivity {
                     queue.add(objectRequest);
                 }
                 // À envoyer vers l'accueil
-                /*Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(LoginActivity.this, RequestDemandsActivity.class);
+                startActivity(intent);
 
             }
         });
