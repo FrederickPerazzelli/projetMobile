@@ -39,11 +39,12 @@
 
     <EditText
         android:id="@+id/sendTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/input"
         android:ems="10"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        android:inputType="textMultiLine"/>
 
     <TextView
         android:id="@+id/TitleSubject"
@@ -56,11 +57,11 @@
 
     <EditText
         android:id="@+id/sendSubject"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/input"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:textSize="24sp"/>
 
     <TextView
@@ -92,11 +93,11 @@
 
     <EditText
         android:id="@+id/sendQuestion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/input"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:textSize="24sp"/>
 
     <Button

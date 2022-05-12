@@ -15,8 +15,11 @@
 
 
         <activity android:name=".ListDemandsActivity"> </activity>
-        <activity android:name=".RequestDemandsActivity"> </activity>
-        <activity android:name=".RequestDemandInfoActivity"> </activity>
+        <activity android:name=".RequestDemandsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".RequestDemandInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"> </activity>
         <activity android:name=".DemandActivity"> </activity>
         <activity android:name=".NewAnswerActivity"> </activity>
         <activity android:name=".NewDemandActivity"> </activity>
@@ -39,7 +42,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

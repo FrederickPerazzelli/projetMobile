@@ -75,12 +75,12 @@ public class ProfileActivity extends AppCompatActivity {
                     if (!field.equals(""))
                         user.setField(field);
                     if (!phone.equals(""))
-                        user.setPhone(new BigInteger(phone));
+                        user.setPhone(new BigInteger(phone.replaceAll("-", "")));
                     user.setBirthdate(user.getBirthdate().replaceAll("/", "-"));
 
                     queue = Volley.newRequestQueue(ProfileActivity.this);
 
-                    String url = "http://192.168.2.13:8000/api/addUser";
+                    String url = "http://192.168.159.1:8000/api/addUser";
                     JSONObject jsonBody = new JSONObject();
 
                     try {
@@ -111,6 +111,11 @@ public class ProfileActivity extends AppCompatActivity {
                                     DBManager dbManager = new DBManager();
                                     dbManager.setupDBConnection(ProfileActivity.this);
                                     dbManager.setUser(user);
+
+                                    // À envoyer vers l'accueil
+                                    Intent intent = new Intent(ProfileActivity.this, RequestDemandsActivity.class);
+                                    startActivity(intent);
+
                                 }
                             },
                             new Response.ErrorListener() {
@@ -122,6 +127,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                     // Add the request to the RequestQueue.
                     queue.add(objectRequest);
+
                 }
             }
         });
