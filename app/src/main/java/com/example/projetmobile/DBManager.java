@@ -1,3 +1,9 @@
+/****************************************
+ Fichier : DBManager.java
+ Auteur : Jean-Nyckolas Roy
+ Fonctionnalité : ---
+ Date : 2022-05-03
+ ****************************************/
 package com.example.projetmobile;
 
 import android.content.ContentValues;
@@ -7,10 +13,23 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.math.BigInteger;
 
+/**
+ * Classe permettant de gérer l'interaction avec la BD locale
+ */
 public class DBManager {
+    /**
+     * Gestionnaire de base de données
+     */
     private SQLiteDatabase mydb;
+    /**
+     * Contexte du DBManager
+     */
     private Context DBcontext;
 
+    /**
+     * Initialise la connection à la BD
+     * @param context est le contexte ou le gestionnaire est instancié
+     */
     public void setupDBConnection(Context context) {
         this.DBcontext = context;
         this.mydb = context.openOrCreateDatabase("projetMobile", Context.MODE_PRIVATE, null);
@@ -18,6 +37,10 @@ public class DBManager {
         this.mydb.execSQL("CREATE TABLE IF NOT EXISTS Meeting(id INTEGER PRIMARY KEY, tutor VARCHAR(255), status VARCHAR(255), motive VARCHAR(255), meetingTime DATETIME, location VARCHAR(255), comments VARCHAR(255));");
     }
 
+    /**
+     * Permet de modifier l'utilisateur courant dans la base de données
+     * @param user est l'utilisateur connecté
+     */
     public void setUser(User user) {
         this.mydb.execSQL("DELETE FROM User;");
 
@@ -34,6 +57,10 @@ public class DBManager {
         this.mydb.insert("User", null, values);
     }
 
+    /**
+     * Retourne l'utilisateur présentement connecté
+     * @return l'utilisateur qui est connecté
+     */
     public User getCurrentUser() {
         Cursor cursor;
 

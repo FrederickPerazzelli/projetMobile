@@ -1,3 +1,9 @@
+/****************************************
+ Fichier : ComplaintActivity.java
+ Auteur : Jean-Nyckolas Roy
+ Fonctionnalité : C10
+ Date : 2022-05-10
+ ****************************************/
 package com.example.projetmobile;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,3 +1,9 @@
+/****************************************
+ Fichier : ProfileActivity.java
+ Auteur : Jean-Nyckolas Roy
+ Fonctionnalité : C2
+ Date : 2022-05-05
+ ****************************************/
 package com.example.projetmobile;
 
 import androidx.appcompat.app.AppCompatActivity;
